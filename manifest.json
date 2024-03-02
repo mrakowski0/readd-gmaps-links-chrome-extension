@@ -1,4 +1,5 @@
 {
+  "author": "m.rakowski91@gmail.com",
   "name": "Re-introduce google maps links to search page",
   "description": "Readds google maps link to the search page and makes map thumbnail clickable.",
   "version": "1.0",
