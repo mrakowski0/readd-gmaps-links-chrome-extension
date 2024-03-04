@@ -8,7 +8,6 @@
     "default_icon": "icon-pin.png",
     "default_popup": "index.html"
   },
-  "permissions": ["activeTab"],
   "content_scripts": [
     {
       "matches": ["*://*.google.com/*"],
