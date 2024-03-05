@@ -21,9 +21,9 @@ if (tabsContainer) {
     const searchQuery = new URLSearchParams(window.location.search).get('q');
 
     const mapsLink = `http://maps.google.com/maps?q=${searchQuery}`;
-    mapsButton?.href = mapsLink;
-
-    clickableMapThumbnail?.parentNode.href = mapsLink;
+    
+    mapsButton && (mapsButton.href = mapsLink);
+    clickableMapThumbnail && (clickableMapThumbnail.parentNode.href = mapsLink);
 
     tabsContainer.prepend(mapsButton);
 }
