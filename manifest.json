@@ -10,7 +10,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.google.com/*"],
+      "matches": [
+        "*://*.google.com/*",
+        "*://*.google.*/*"
+      ],
       "js": ["script.js"]
     }
   ]
