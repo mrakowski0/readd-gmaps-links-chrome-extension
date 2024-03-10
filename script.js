@@ -20,7 +20,11 @@ if (tabsContainer) {
 
     const searchQuery = new URLSearchParams(window.location.search).get('q');
 
-    const mapsLink = `http://maps.google.com/maps?q=${searchQuery}`;
+    const parts = new URL(window.location).hostname.split('.');
+
+    const topLevelDomainCode = parts[parts.length - 1];
+
+    const mapsLink = `http://maps.google.${topLevelDomainCode}/maps?q=${searchQuery}`;
     
     mapsButton && (mapsButton.href = mapsLink);
     clickableMapThumbnail && (clickableMapThumbnail.parentNode.href = mapsLink);
