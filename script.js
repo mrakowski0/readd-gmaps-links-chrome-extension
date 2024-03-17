@@ -1,5 +1,7 @@
-// DOM elements
-const tabsContainer = document.querySelector('.IUOThf');
+// DOM elements (both of these are possible due to google's AB testing changing their UI)
+const buttonContainer = document.querySelector('.IUOThf');
+const tabsContainer = document.querySelector('.crJ18e');
+
 const clickableMapThumbnail = document.querySelector('.lu-fs');
 const addressMapContainer = document.querySelector('#pimg_1');
 const placesMapContainer = document.querySelector('.S7dMR')
@@ -12,8 +14,8 @@ const parts = new URL(window.location).hostname.split('.');
 const topLevelDomainCode = parts[parts.length - 1];
 const mapsLink = `http://maps.google.${topLevelDomainCode}/maps?q=${searchQuery}`;
 
-// if tabs exist, add the maps tab and make the small map thumbnail on the right clickable
-if (tabsContainer) {
+// if buttons exist, add the maps button and make the small map thumbnail on the right clickable
+if (buttonContainer) {
     const mapsButton = document.createElement('a');
     mapsButton.classList.add('nPDzT', 'T3FoJb');
 
@@ -30,9 +32,35 @@ if (tabsContainer) {
     mapsButton.appendChild(mapDiv);
     
     mapsButton && (mapsButton.href = mapsLink);
-    clickableMapThumbnail && (clickableMapThumbnail.parentNode.href = mapsLink);
+    setTimeout(() => {
+        clickableMapThumbnail && (clickableMapThumbnail.parentNode.href = mapsLink);
+    }, 0)
 
-    tabsContainer.prepend(mapsButton);
+    buttonContainer.prepend(mapsButton);
+}
+
+// if tabs exist, add the maps tab and make the small map thumbnail on the right clickable
+if (tabsContainer) {
+    const tabsButton = document.createElement('a');
+    tabsButton.classList.add('LatpMc', 'nPDzT', 'T3FoJb');
+
+    const mapSpan = document.createElement('span');
+    mapSpan.classList.add('YmvwI');
+    mapSpan.textContent = 'Maps';
+
+    tabsButton.appendChild(mapSpan);
+    
+    tabsButton && (tabsButton.href = mapsLink);
+    setTimeout(() => {
+        clickableMapThumbnail && (clickableMapThumbnail.parentNode.href = mapsLink);
+    }, 0)
+
+    // tabsContainer.prepend(tabsButton);
+    if (tabsContainer.children.length > 0) {
+        tabsContainer.insertBefore(tabsButton, tabsContainer.firstElementChild.nextSibling);
+    } else {
+        tabsContainer.appendChild(tabsButton);
+    }
 }
 
 // if address map is shown (the one right below search bar), make it clickable
@@ -52,7 +80,6 @@ if (placesMapContainer) {
     placesMapContainer.parentElement.insertBefore(mapWrapperLinkEl, placesMapContainer);
     mapWrapperLinkEl.appendChild(placesMapContainer);
 }
-
 
 // if green tinted country map is shown (the one right below search bar), instead of making it size-extend on click, open google maps instead
 if (countryMapContainer) {
