@@ -1,25 +1,53 @@
 <html>
-  <body style="background-color: white; width: 500px; padding: 40px;">
-    <h2>Re-introduce google maps links to search page</h2>
-    <p>This extension re-adds linked Google Maps button/tab above search results in google search page. In addition, it makes the little maps UI clickable as well.</p>
-    <p>Supported views:<br/>
-      - address maps<br/>
-      - google places maps<br/>
-      - country maps<br/>
-      - small map thumbnail on the right side (part of gallery)<br/>
-    </p>
-    <p>The purpose of this extension is to allow non-technical people (or people afraid to use custom script loader extensions such as Tampermonkey) to have these functionalites back in their chrome browser.</p> 
-    <p>The code is very simple and is open source - <a href="https://github.com/mrakowski0/readd-gmaps-links-chrome-extension">GitHub link</a></p>
-    <hr />
-    <p> 
-        <b>Some resources explaining why the default behavior has changed in EU countries:</b>
-        <div><a target="_blank" href="https://www.reddit.com/r/GoogleMaps/comments/19ahfx2/why_doesnt_maps_show_up_under_google_searches/">Reddit post</a></div>
-        <div><a target="_blank" href="https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/europe-fit-digital-age/digital-markets-act-ensuring-fair-and-open-digital-markets_en">Digital Markets Act (EU law) link</a></div>
-    </p>
-    <hr />
-    <p>
-      <b>FOR OPERA USERS:</b>
-      You need to go to your extension settings in Opera, find this extension and tick the "Allow access to search page results" then refresh the page.
-    </p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body>
+    <div class="container">
+    <div class="card" tabindex="0">
+      <div class="header">
+        <img src="../assets/icon-pin.png" alt="" class="icon-img" />
+        <h2 id="title"></h2>
+      </div>
+  <div class="row" id="row_enableExtension">
+        <label class="switch">
+          <input type="checkbox" id="enableExtension" />
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+        <span id="label_enableExtension" class="switch-label"></span>
+      </div>
+      <div class="hr"></div>
+      <div class="row" id="row_enableMapsTab">
+        <label class="switch">
+          <input type="checkbox" id="enableMapsTab" />
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+        <span id="label_enableMapsTab" class="switch-label"></span>
+      </div>
+  <div class="row" id="row_enableActionButton">
+        <label class="switch">
+          <input type="checkbox" id="enableActionButton" />
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+        <span id="label_enableActionButton" class="switch-label"></span>
+      </div>
+  <div class="row" id="row_enableLocalActionTile">
+        <label class="switch">
+          <input type="checkbox" id="enableLocalActionTile" />
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+        <span id="label_enableLocalActionTile" class="switch-label"></span>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <p id="about1" class="muted"></p>
+    <p id="about2" class="muted"></p>
+
+    <script src="popup.js"></script>
+    </div>
   </body>
-</html>
+  </html>

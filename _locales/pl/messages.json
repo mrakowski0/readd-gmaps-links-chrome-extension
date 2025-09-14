@@ -1,0 +1,41 @@
+{
+  "extensionName": {
+    "message": "Przywróć link do Map Google"
+  },
+  "extensionDescription": {
+    "message": "Przywraca link do Map Google na stronie wyszukiwania i umożliwia klikanie miniatur map."
+  },
+  "mapsTabLabel": {
+    "message": "Mapy"
+  },
+  "mapsBubbleLabel": {
+    "message": "Mapy"
+  },
+  "openInMaps": {
+    "message": "Otwórz w Mapach"
+  },
+  "optionsTitle": {
+    "message": "Linki do Map Google | Opcje"
+  },
+  "option_enableExtension_label": {
+    "message": "Włącz rozszerzenie"
+  },
+  "option_enableActionButton_label": {
+    "message": "Dodaj przycisk \"Otwórz w Mapach\" obok paska akcji"
+  },
+  "option_enableLocalActionTile_label": {
+    "message": "Dodaj kafelek \"Otwórz w Mapach\" w wierszu działań lokalnych"
+  },
+  "option_enableMapsTab_label": {
+    "message": "Dodaj kartę 'Mapy' do górnej nawigacji"
+  },
+  "aboutText1": {
+    "message": "Otwarty projekt open-source, który przywraca kartę/przycisk Map na stronie wyników Google i umożliwia klikanie miniaturowej mapy."
+  },
+  "aboutText2": {
+    "message": "Kod źródłowy i zgłoszenia problemów znajdziesz na <a href=\"https://github.com/mrakowski0/readd-gmaps-links-chrome-extension\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>. Zapraszamy do kontrybucji."
+  },
+  "operaNote": {
+    "message": "<strong>Dla użytkowników Opery</strong>: Wejdź w ustawienia rozszerzeń w Operze, znajdź to rozszerzenie i zaznacz opcję \"Zezwalaj na dostęp do wyników strony wyszukiwania\", a następnie odśwież stronę."
+  }
+}

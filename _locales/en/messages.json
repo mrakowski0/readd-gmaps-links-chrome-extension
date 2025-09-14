@@ -1,0 +1,41 @@
+{
+  "extensionName": {
+    "message": "Re-introduce Google Maps link"
+  },
+  "extensionDescription": {
+    "message": "Readds Google Maps link to the search page and makes map thumbnail clickable."
+  },
+  "mapsTabLabel": {
+    "message": "Maps"
+  },
+  "mapsBubbleLabel": {
+    "message": "Maps"
+  },
+  "openInMaps": {
+    "message": "Open in Maps"
+  },
+  "optionsTitle": {
+    "message": "Google Maps Links | Options"
+  },
+  "option_enableExtension_label": {
+    "message": "Enable extension"
+  },
+  "option_enableActionButton_label": {
+    "message": "Add \"Open in Maps\" button next to the action bar"
+  },
+  "option_enableLocalActionTile_label": {
+    "message": "Add \"Open in Maps\" tile in the local actions row"
+  },
+  "option_enableMapsTab_label": {
+    "message": "Add 'Maps' tab to the top navigation"
+  },
+  "aboutText1": {
+    "message": "Open-source extension that brings back the Google Maps tab/button on the search page and makes the small map thumbnail clickable."
+  },
+  "aboutText2": {
+    "message": "Source code and issue tracking are available on <a href=\"https://github.com/mrakowski0/readd-gmaps-links-chrome-extension\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>. Contributions are welcome."
+  },
+  "operaNote": {
+    "message": "<strong>For OPERA users</strong>: You need to go to your extension settings in Opera, find this extension and tick the \"Allow access to search page results\" then refresh the page."
+  }
+}
