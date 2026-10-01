@@ -206,7 +206,8 @@
         "*://*.google.cat/*"
       ],
       "js": ["src/script.js"],
-      "css": ["src/styles.css"]
+      "css": ["src/styles.css"],
+      "run_at": "document_start"
     }
   ]
 }
